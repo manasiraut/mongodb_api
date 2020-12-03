@@ -14,10 +14,10 @@ app.get("/api", async (req, res) => {
 		{ useUnifiedTopology: true }
 	);
 	// get database
-	const db = client.db("mydb");
+	const db = client.db("mydb1");
 
 	// get data from collection
-	const data = await db.collection("mydata").find().toArray();
+	const data = await db.collection("Movies").find().toArray();
 
 	// send response back to client
 	res.send(data);
